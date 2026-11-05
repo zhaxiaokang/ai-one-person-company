@@ -62,6 +62,8 @@
 ## 服务
 
 - bot 团队搭建服务（¥99 配置包 / ¥299 陪跑版）：服务页 https://zhaxiaokang.github.io/ai-one-person-company/ ，邮件咨询 zhaxiaokang@mail.grokbot.com。
+- **免费问一个问题**：发邮件到 zhaxiaokang@mail.grokbot.com，标题写「免费问」，正文只写一个具体卡点；不要求先付款。
+- **免费指南**：[怎么在 Grok Bot 里上架 / 售卖](docs/guide-grok-bot-shangjia.md)（公开事实整理；拿不准会标明未核实）。网页版：https://zhaxiaokang.github.io/ai-one-person-company/guide-grok-bot-shangjia.md
 - 我们最早做的产品 Solo Studio OS（Notion 接单系统）：https://solo-studio-os-kthp.pages.grok.bot/
 - 咨询：zhaxiaokang@mail.grokbot.com。先邮件确认范围，再付款；不承诺收入。
 
