@@ -1,0 +1,114 @@
+<!doctype html><html lang="zh-Hans"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>怎么在 Grok Bot 里上架 / 售卖｜公开事实整理</title>
+<style>body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;max-width:760px;margin:0 auto;padding:24px;line-height:1.75;color:#222}h1{font-size:1.6em}h2{margin-top:1.8em;border-bottom:1px solid #eee;padding-bottom:4px}table{border-collapse:collapse;width:100%;margin:12px 0}td,th{border:1px solid #ddd;padding:8px;vertical-align:top}th{background:#f6f6f6}blockquote{background:#fff8e6;border-left:4px solid #e0a800;margin:12px 0;padding:10px 14px}a{color:#0b62c4}code{background:#f4f4f4;padding:1px 4px;border-radius:3px}.box{background:#f4f8ff;border:1px solid #c5daf5;border-radius:8px;padding:14px 16px;margin:18px 0}.btn{display:inline-block;background:#0b62c4;color:#fff!important;text-decoration:none;padding:10px 16px;border-radius:6px}footer{margin-top:2.5em;color:#777;font-size:.9em}</style></head><body>
+<p><a href="./">← 返回服务页</a></p>
+<h1>怎么在 Grok Bot 里「上架 / 售卖」——公开事实整理（2026-11-05）</h1>
+<blockquote><p>独立工作室 Solo Studio OS 整理。我们与 Grok Bot / SpaceXAI / Shopify <strong>没有隶属或授权关系</strong>。文中只写能核对到来源的公开信息；拿不准的会标明「未核实」。功能会变，以官方页面为准。</p></blockquote>
+<h2>先把两个「上架」分开</h2>
+<p>
+很多人问「怎么在 Grok Bot 上架商品售卖」，其实常混了两件事：
+</p>
+<table><thead><tr><th>说法</th><th>实际指什么</th><th>公开可核对的路径</th></tr></thead><tbody>
+<tr><td>Bot <strong>帮你买东西</strong></td><td>购物卡片、比价、下单审批</td><td>官方/产品侧宣传的 shopping 体验（买家侧）</td></tr>
+<tr><td>你自己 <strong>卖东西</strong></td><td>开店、上商品、收款、发货</td><td>常见是：<strong>接 Shopify 连接器</strong>，或 <strong>Bot 操作你已有的外部店</strong>（闲鱼、跨境后台等）</td></tr>
+</tbody></table>
+<p>
+Elon Musk 2026-11-04 转发 Grok Bot 官方帖，文案是 *「Grok @Bot shopping is great」*，官方引用帖写的是找优惠、比价、跟踪订单——这是 <strong>购物（买）</strong>，不是「在 Bot 内一键开店卖货」的完整说明。  
+<br>来源：<a href="https://x.com/elonmusk/status/2117893633009651980">https://x.com/elonmusk/status/2117893633009651980</a> 、<a href="https://x.com/bot/status/2117736249444507834">https://x.com/bot/status/2117736249444507834</a>
+</p>
+<h2>路径 A：用 Shopify 连接器在聊天里管店、上数字商品（可核对）</h2>
+<p>
+Shopify 帮助中心有正式文档《Grok 的 Shopify 连接器》：
+</p>
+<p>
+<a href="https://help.shopify.com/zh-CN/manual/ai-powered-tools/connecting-ai-tools/shopify-connector-for-grok">https://help.shopify.com/zh-CN/manual/ai-powered-tools/connecting-ai-tools/shopify-connector-for-grok</a>
+</p>
+<p>
+文档里写明（摘要，细节以原文为准）：
+</p>
+<ol>
+<li>1. <strong>Grok 和 Grok Bot 是两个产品</strong>；在 Grok 里装的连接器 <strong>不会</strong> 自动装到 Grok Bot。要在 <strong>Grok Bot → Connect apps → 搜 Shopify</strong> 安装。</li>
+<li>2. 可以在聊天里：创建/管理商店、加商品、改价格与描述、做产品系列、查订单与分析等（具体权限取决于你批准的访问级别）。</li>
+<li>3. <strong>销售数字产品</strong>：可把文件或链接建成数字商品，开启自动配送，买家付款后收到下载/链接邮件。文档给了示例提示，例如用某个价格卖一份 PDF。</li>
+<li>4. 付款方式、税费、域名、套餐等 <strong>设置</strong> 仍要在 Shopify 后台完成；连接器不能替代后台。</li>
+<li>5. 店铺套餐费按 Shopify 标准计费；Grok 订阅费付给 xAI，不是付给 Shopify。</li>
+</ol>
+<p>
+<strong>实操顺序（按文档归纳，非官方逐步向导截图）：</strong>
+</p>
+<ol>
+<li>1. 打开 Grok Bot → Connect apps → 安装 Shopify，并在 Shopify 侧批准访问。</li>
+<li>2. 在对话里明确说「用 Shopify」做某件事（文档建议直接提及 Shopify，避免它只给通用建议）。</li>
+<li>3. 描述商品与价格，让连接器创建产品；数字商品再按文档装 Digital Products、上传文件或贴链接，然后要求发布。</li>
+<li>4. 到 Shopify 后台核对付款、政策、域名，再真正对外卖。</li>
+</ol>
+<p>
+我们 <strong>没有</strong> 在自家账号上完整跑通「从零到第一笔 Shopify 收款」的录像；若你卡在某一步，把报错原文发来（可打码），我们按公开文档帮你对一下。
+</p>
+<h2>路径 B：Bot 不「内置开店」，而是帮你操作外部售卖平台</h2>
+<p>
+公开中文实操文章里，常见做法是：Bot 有云端浏览器/终端，帮你写闲鱼标题与描述、整理上架资料、或对接卖家后台 API——<strong>店还是开在闲鱼 / Ozon / 自建站等</strong>，不是「商品挂在 Grok Bot 货架上」。
+</p>
+<p>
+示例（第三方博客，非官方）：
+</p>
+<ul>
+<li>闲鱼上架资料整理：<a href="https://immilesma.com/blog/grok-bot-practical-guide/">https://immilesma.com/blog/grok-bot-practical-guide/</a></li>
+<li>Ozon 选品上架流程分享：<a href="https://kuakuakua.com/blog/ozon-grok-bot-listing-49-sku.html">https://kuakuakua.com/blog/ozon-grok-bot-listing-49-sku.html</a></li>
+</ul>
+<p>
+这类路径要自己负责平台规则、版权与合规。我们不做刷量、批量违规注册、冒名。
+</p>
+<h2>路径 C：卖「Bot 模板 / Skill」——部分信息未核实</h2>
+<p>
+X 上有人提到把 Grok Bot 做成 Skill 模板，到某个网站售卖（例如讨论帖 <a href="https://x.com/sereinworld/status/2118306834557685970）。也有人转发「模板创作者奖励计划」类说法。">https://x.com/sereinworld/status/2118306834557685970）。也有人转发「模板创作者奖励计划」类说法。</a>
+</p>
+<p>
+<strong>我们未能在官方帮助中心核对到一份稳定、完整的「官方模板商店上架手册」链接</strong>（页面与活动可能在变）。在核对到官方文档前，请：
+</p>
+<ul>
+<li>以 Grok Bot / xAI 产品内实际入口为准；</li>
+<li>不要把第三方截图当政策；</li>
+<li>若你找到官方说明页，欢迎把链接寄给我们，我们会更新本文。</li>
+</ul>
+<h2>路径 D：不依赖平台即时结账——服务型售卖（我们自己在用）</h2>
+<p>
+若你卖的是 <strong>配置、陪跑、代搭建</strong> 这类服务：
+</p>
+<ol>
+<li>1. 公开一页说明（含独立声明、包含/不包含、退款）；</li>
+<li>2. 买家先发邮件确认范围；</li>
+<li>3. 确认后再付（我们过渡用 PayPal.me）；</li>
+<li>4. 邮件交付文件与指南。</li>
+</ol>
+<p>
+这是我们当前公开在跑的流程，不是官方功能。服务页：<a href="https://zhaxiaokang.github.io/ai-one-person-company/">https://zhaxiaokang.github.io/ai-one-person-company/</a>
+</p>
+<h2>常见卡点（来自公开文档 + 我们自己踩过的坑）</h2>
+<table><thead><tr><th>卡点</th><th>说明</th></tr></thead><tbody>
+<tr><td>以为「Bot shopping」= 一键开店卖货</td><td>shopping 宣传偏 <strong>买</strong>；卖货请走 Shopify 连接器或外部店</td></tr>
+<tr><td>只在 Grok 里装了 Shopify</td><td>Grok Bot 要单独在 Connect apps 里装</td></tr>
+<tr><td>商品建了但买不了</td><td>付款/税费/域名常需 Shopify 后台；未保存的预览店可能有密码保护</td></tr>
+<tr><td>中国大陆收款</td><td>Shopify、PayPal、各平台规则不同；我们自己也曾卡在实名与提现，不保证你一定能过审</td></tr>
+<tr><td>空头承诺</td><td>上架 ≠ 有人买。我们自己到写稿日收入仍可能是 ¥0</td></tr>
+</tbody></table>
+<h2>软着陆：下一步你可以做什么</h2>
+<ol>
+<li>1. <strong>只想先搞清楚自己属于哪条路径</strong>：把你的目标（数字文件 / 实物 / 代搭建 / 模板）发一封短邮件，我们免费回一句建议（见下）。</li>
+<li>2. <strong>想自己装一支会分工的 bot 团队</strong>：看公开仓库 <a href="https://github.com/zhaxiaokang/ai-one-person-company">https://github.com/zhaxiaokang/ai-one-person-company</a> ，或看服务页两档（¥99 / ¥299）。我们不承诺收入。</li>
+</ol>
+<p>
+<strong>免费问一个问题：</strong>  
+<br>发邮件到 zhaxiaokang@mail.grokbot.com，标题写「免费问」，正文只写 <strong>一个</strong> 具体问题（例如「我卖 PDF，该走 Shopify 还是外部店？」）。一般 24 小时内回复（北京时间）。不要求先付款。
+</p>
+<hr>
+<p>
+最后更新：2026-11-05（北京时间）。若官方文档变更，以 Shopify / xAI 原文为准。
+</p>
+<div class="box">
+<p><strong>下一步</strong>：有一个具体卡点？先免费问，不要求付款。</p>
+<p><a class="btn" href="mailto:zhaxiaokang@mail.grokbot.com?subject=%E5%85%8D%E8%B4%B9%E9%97%AE">写邮件：先免费问一个问题</a>
+　<a href="./">服务页（¥99 / ¥299）</a></p>
+</div>
+<footer>Solo Studio OS · 与 Markdown 版同步 · <a href="https://github.com/zhaxiaokang/ai-one-person-company/blob/main/docs/guide-grok-bot-shangjia.md">GitHub 源文件</a></footer>
+</body></html>
